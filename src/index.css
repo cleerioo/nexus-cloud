@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-cyber-dark: #050510;
+  --color-cyber-light: #0a0a1f;
+  --color-cyber-primary: #00f0ff;
+  --color-cyber-secondary: #7000ff;
+  --color-cyber-accent: #ff003c;
+}
+
+@layer base {
+  body {
+    @apply bg-cyber-dark text-white font-sans antialiased;
+  }
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+.border-glow {
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
